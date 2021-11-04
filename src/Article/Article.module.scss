@@ -1,0 +1,46 @@
+$arrowIconSize: 0.7rem;
+
+@mixin arrowSize {
+  width: $arrowIconSize;
+  height: $arrowIconSize;
+  background-size: $arrowIconSize;
+}
+
+.articleText{
+  padding: 0 1rem;
+}
+
+.separatorLine{
+  margin: 0 1rem;
+  border: 1px solid #F7FAFB;
+}
+.openedArticle{
+  background: #F3FCFF;
+  & ~ .separatorLine{
+    display: none;
+  }
+}
+
+.article{
+  font-weight: normal;
+
+  img{
+    width: 100%;
+  }
+
+  .articleTitle{
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    .arrowDown{
+      background: url("../img/arrow_down.svg") center center no-repeat;
+      @include arrowSize
+    }
+    .arrowUp{
+      background: url("../img/arrow_up.svg") center center no-repeat;
+      @include arrowSize
+    }
+  }
+
+}

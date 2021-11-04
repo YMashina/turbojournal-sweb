@@ -1,0 +1,25 @@
+body{
+  font-family: ProximaNova-Regular, Proxima Nova,'Nunito Sans', Verdana,Geneva,sans-serif;
+  background: #F7FAFB;
+  margin: 0;
+  font-weight: lighter;
+}
+
+
+.gridLayout{
+  display: grid;
+  grid-template-rows: 660px 1fr;
+  grid-template-columns: 230px 1fr;
+  grid-template-areas:
+          "sidebar content"
+          "footer footer";
+}
+
+.content{
+  box-sizing: border-box;
+  grid-area: content;
+  padding: 20px 20px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}

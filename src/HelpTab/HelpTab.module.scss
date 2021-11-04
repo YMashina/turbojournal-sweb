@@ -1,0 +1,28 @@
+
+.helpTab{
+  overflow: auto;
+  background: #FFFFFF;
+  box-shadow: 1px 1px 4px #E3E9EC;
+}
+
+.articlesList{
+  display: flex;
+  flex-direction: column;
+}
+
+.helpJournalNormal{
+  color: #062436;
+  font-size: 12px;
+  margin-top: 16px;
+  margin-left: 1rem;
+  font-weight: 300;
+}
+
+.helpJournalBold{
+  color: #062436;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 1rem;
+  margin-bottom: 16px;
+  font-weight: bold;
+}

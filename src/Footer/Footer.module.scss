@@ -1,0 +1,38 @@
+.footer{
+  grid-area: footer;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.bottomRight{
+  margin-right: 2rem;
+
+  font-family: Proxima Nova,'Nunito Sans', Verdana,Geneva,sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+
+  color: #000000;
+
+  span{
+    color: #3DBDF6;
+  }
+}
+
+.bottomLeft{
+  margin-left: 2rem;
+  font-family: Proxima Nova,'Nunito Sans', Verdana,Geneva,sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+
+  color: #000000;
+
+  span{
+    color: #3DBDF6;
+  }
+}

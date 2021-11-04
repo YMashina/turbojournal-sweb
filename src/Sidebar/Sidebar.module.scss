@@ -1,0 +1,67 @@
+$lineHeight: 2rem;
+@mixin iconPicture {
+  width: $lineHeight;
+  height: $lineHeight;
+  background-size: 0.75*$lineHeight;
+  margin-right: 13.25px;
+}
+
+.sidebar{
+  grid-area: sidebar;
+  background: #062436;
+}
+
+.logo{
+  background: url("../img/icon_logo.svg") center center no-repeat;
+  height: 2rem;
+  width: 8rem;
+  color: #36BDF7;
+  z-index: 3;
+  background-size: 7rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.sidebarMenuList{
+  font-size: 14px;
+  margin-top: 5rem;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  .menuOption{
+    display: flex;
+    justify-content: left;
+    line-height: $lineHeight;
+    padding: 10.3px 12px 9px 20px;
+  }
+  .iconUser{
+    background: url("../img/icon_user.svg") center center no-repeat;
+    @include iconPicture;
+  }
+  .iconVPS{
+    background: url("../img/icon_VPS.svg") center center no-repeat;
+    @include iconPicture;
+  }
+  .iconDomains{
+    background: url("../img/icon_domens.svg") center center no-repeat;
+    @include iconPicture;
+  }
+  .iconHelp{
+    background: url("../img/icon_help.svg") center center no-repeat;
+    @include iconPicture;
+  }
+
+  .chosenOption{
+    position: relative;
+    background: #15526A;
+    &:before{
+      position:absolute;
+      top:0;
+      left:0;
+      width: 6px;
+      height:100%;
+      content:"";
+      background: #3DBDF6;
+    }
+  }
+}
