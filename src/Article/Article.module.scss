@@ -17,7 +17,9 @@ $arrowIconSize: 0.7rem;
 .openedArticle{
   background: #F3FCFF;
   & ~ .separatorLine{
-    display: none;
+    &:first-child{
+      display: none;
+    }
   }
 }
 
