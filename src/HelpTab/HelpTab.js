@@ -21,7 +21,6 @@ const HelpTab = () => {
     });
 
     const result = convertToObject(response.data);
-    console.log(result.rss.channel.item);
     setArticles(result.rss.channel.item);
     setIsLoading(false);
   }, []);
