@@ -26,7 +26,7 @@ const HelpTab = () => {
     } catch (e) {
       console.log(e);
     }
-  });
+  }, []);
 
   useEffect(() => {
     setIsLoading(true);
