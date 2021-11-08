@@ -16,13 +16,17 @@ const HelpTab = () => {
 
   useEffect(async () => {
     setIsLoading(true);
-    const response = await axios.get("https://sweb.ru/export/turbojournal/", {
-      "Content-Type": "application/xml; charset=utf-8",
-    });
+    try {
+      const response = await axios.get("https://sweb.ru/export/turbojournal/", {
+        "Content-Type": "application/xml; charset=utf-8",
+      });
 
-    const result = convertToObject(response.data);
-    setArticles(result.rss.channel.item);
-    setIsLoading(false);
+      const result = convertToObject(response.data);
+      setArticles(result.rss.channel.item);
+      setIsLoading(false);
+    } catch (e) {
+      console.log(e);
+    }
   }, []);
 
   return (
