@@ -8,7 +8,8 @@ body{
 
 .gridLayout{
   display: grid;
-  grid-template-rows: 660px 1fr;
+  height: 100vh;
+  grid-template-rows: 1fr 101px;
   grid-template-columns: 230px 1fr;
   grid-template-areas:
           "sidebar content"
@@ -22,4 +23,5 @@ body{
   width: 100%;
   display: flex;
   flex-direction: column;
+  overflow: auto;
 }
