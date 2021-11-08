@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import styles from "./HelpTab.module.scss";
 import Spinner from "../Spinner/Spinner";
 import Article from "../Article/Article";
@@ -14,8 +14,7 @@ const HelpTab = () => {
     return object;
   };
 
-  useEffect(async () => {
-    setIsLoading(true);
+  const getArticles = useCallback(async () => {
     try {
       const response = await axios.get("https://sweb.ru/export/turbojournal/", {
         "Content-Type": "application/xml; charset=utf-8",
@@ -27,6 +26,11 @@ const HelpTab = () => {
     } catch (e) {
       console.log(e);
     }
+  });
+
+  useEffect(() => {
+    setIsLoading(true);
+    getArticles();
   }, []);
 
   return (
